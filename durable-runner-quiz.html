@@ -927,11 +927,10 @@ async function submitEmail() {
   btn.style.pointerEvents = 'none';
 
   try {
-    const response = await fetch('https://connect.mailerlite.com/api/subscribers', {
+    const response = await fetch('https://odomlane17.app.n8n.cloud/webhook/quiz-subscribe', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiZDZmYTkzMjFhMjZlYzRhNjc4Y2ZkMTAwYWUxNDg1ZTAzOGRkMzRjODI0YTgxYzZhNTc5OTRkNmNlZmI0YzE5YmFkZThkN2IxMTNlNDhhZjciLCJpYXQiOjE3NzI4MjgxNTQuNzUxOTM2LCJuYmYiOjE3NzI4MjgxNTQuNzUxOTM5LCJleHAiOjQ5Mjg1MDE3NTQuNzQ1OTUxLCJzdWIiOiIyMTg3MTMyIiwic2NvcGVzIjpbXX0.oXQDOppaM76HaO2ONlBFtOtMNGExJUXDEpLKrRXz0HKp4FWCGhL57a5NCVOevDKiChLD7vPEvOpoE9f1tHs0CmLcvB6r2wnSM-F8uAF2j6bQ8bvrvNMwISCPV99dSF8m6k8wUc6iGcD2rac2H7S-bSf9CrwMhD4aH1Vto21ozOQHxTq2afr0pDoiOZQClkg0ttra0bccxcchNmkcj9E2h7DWxU2-YQ1rrarTWHJYZ8Yb0UCawPa_ZYaW07hoV5rzTjJUoWcUlaOktV3ss-RMS2JgacVKmt32_Qy1RSA0jJiaTCCOxdGcNb2kPwrAOWJwJDec3OuCteTna-aPMX7krww5WPEupNH7x4PH-opdt6OPqt7Qa0xivCYmzI9doCplxExxzMbvrsBzLt-BZimOEPy5MrJR7B29NkF2pRv_KEZL3zQC3wCzG9xwgyCBHPCJ8128rYupGoX04b4IGdmN8Vpr02rx8uRDPmvTQLfhSYYWR_2LO4CULRlKG03SFNtHyKGt4M8DtvYrV9NLc8J6Vbd0WUf2qSAjW8M-QcQ0RE0YHStrGo8pcMzAOf4N7pwaeq904JuTW4vY4t2EASWmIYexpngD8PPDwH87FKM779eTPUtcf6lKYuPGsBlmHU-65YCCkK38R5a3ManaAkXOr-7_T3qn_uQhL3uIoEhEG2g'
       },
       body: JSON.stringify({
         email: email,
